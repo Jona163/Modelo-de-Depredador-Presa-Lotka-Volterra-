@@ -3,7 +3,6 @@
 # Descripción: Código para modelo de lotka.
 # GitHub: https://github.com/Jona163
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
@@ -14,3 +13,16 @@ def lotka_volterra(state, t, alpha, beta, delta, gamma):
     dprey_dt = alpha * prey - beta * prey * predator
     dpredator_dt = delta * prey * predator - gamma * predator
     return [dprey_dt, dpredator_dt]
+
+
+# Parámetros del modelo
+alpha = 0.1  # Tasa de crecimiento de las presas
+beta = 0.02  # Tasa de depredación
+delta = 0.01  # Tasa de reproducción del depredador por depredación
+gamma = 0.1   # Tasa de muerte de los depredadores
+
+# Condiciones iniciales: [presas, depredadores]
+initial_state = [40, 9]
+
+# Espacio temporal
+time = np.linspace(0, 200, 5000)
