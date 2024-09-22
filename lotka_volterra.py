@@ -26,3 +26,12 @@ initial_state = [40, 9]
 
 # Espacio temporal
 time = np.linspace(0, 200, 5000)
+
+
+# Solución del sistema de ecuaciones diferenciales
+solution = odeint(lotka_volterra, initial_state, time, args=(alpha, beta, delta, gamma))
+
+# Graficar los resultados
+prey, predator = solution.T
+
+plt.figure(figsize=(10, 6))
