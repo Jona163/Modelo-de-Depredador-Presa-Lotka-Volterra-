@@ -1,5 +1,3 @@
-¡Claro! Aquí tienes una versión con más estilo y personalidad para que destaque en tu GitHub:
-
 ---
 
 # 🦊🐰 Modelo Depredador-Presa (Lotka-Volterra) 🐺🌿
