@@ -36,8 +36,14 @@ prey, predator = solution.T
 
 plt.figure(figsize=(10, 6))
 
-
 # Graficar las presas y depredadores en función del tiempo
 plt.plot(time, prey, label='Presas (Conejos)', color='blue')
 plt.plot(time, predator, label='Depredadores (Lobos)', color='red')
+
+plt.title('Modelo Depredador-Presa (Lotka-Volterra)')
+plt.xlabel('Tiempo')
+plt.ylabel('Población')
+plt.legend(loc='best')
+plt.grid(True)
+plt.show()
 
