@@ -14,7 +14,6 @@ def lotka_volterra(state, t, alpha, beta, delta, gamma):
     dpredator_dt = delta * prey * predator - gamma * predator
     return [dprey_dt, dpredator_dt]
 
-
 # Parámetros del modelo
 alpha = 0.1  # Tasa de crecimiento de las presas
 beta = 0.02  # Tasa de depredación
@@ -26,7 +25,6 @@ initial_state = [40, 9]
 
 # Espacio temporal
 time = np.linspace(0, 200, 5000)
-
 
 # Solución del sistema de ecuaciones diferenciales
 solution = odeint(lotka_volterra, initial_state, time, args=(alpha, beta, delta, gamma))
@@ -46,4 +44,14 @@ plt.ylabel('Población')
 plt.legend(loc='best')
 plt.grid(True)
 plt.show()
+
+# Graficar el diagrama de fase (presas vs depredadores)
+plt.figure(figsize=(8, 6))
+plt.plot(prey, predator, color='green')
+plt.title('Diagrama de Fase: Presas vs Depredadores')
+plt.xlabel('Presas (Conejos)')
+plt.ylabel('Depredadores (Lobos)')
+plt.grid(True)
+plt.show()
+
 
