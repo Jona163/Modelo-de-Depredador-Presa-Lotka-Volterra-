@@ -35,3 +35,9 @@ solution = odeint(lotka_volterra, initial_state, time, args=(alpha, beta, delta,
 prey, predator = solution.T
 
 plt.figure(figsize=(10, 6))
+
+
+# Graficar las presas y depredadores en función del tiempo
+plt.plot(time, prey, label='Presas (Conejos)', color='blue')
+plt.plot(time, predator, label='Depredadores (Lobos)', color='red')
+
